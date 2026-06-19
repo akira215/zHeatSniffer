@@ -1,0 +1,381 @@
+I (274) Main_app: ---------- Starting App ----------
+I (284) Main_app: ---------- Setup ----------
+I (284) uart: ESP_INTR_FLAG_IRAM flag not set while CONFIG_UART_ISR_IN_IRAM is enabled, flag updated
+I (294) Main_app: UART1 initialized at 9600 baud
+I (7294) Main_app: Read 1024 bytes:
+I (7294) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (7294) Main_app: 0a 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30
+I (7294) Main_app: 30 30 30 32 34 46 0d 0a 3a 30 33 30 33 30 30 41
+I (7304) Main_app: 30 30 30 30 32 35 38 0d 0a 3a 30 33 30 33 30 34
+I (7304) Main_app: 30 30 37 44 30 39 31 41 35 36 0d 0a 3a 30 33 30
+I (7314) Main_app: 33 30 30 30 31 30 30 30 33 46 36 0d 0a 3a 30 33
+I (7314) Main_app: 30 33 30 36 30 30 31 30 30 30 43 38 30 30 31 45
+I (7324) Main_app: 46 45 0d 0a 3a 30 33 31 30 30 30 43 38 30 30 31
+I (7324) Main_app: 45 33 43 30 30 44 45 30 30 36 35 37 32 32 30 30
+I (7334) Main_app: 38 30 32 30 30 30 30 30 37 44 30 30 30 30 30 30
+I (7344) Main_app: 31 30 30 30 30 30 30 30 38 30 32 30 30 30 30 30
+I (7344) Main_app: 36 41 34 30 30 30 30 35 43 35 43 30 30 30 30 30
+I (7354) Main_app: 30 30 30 30 34 42 30 30 30 30 30 30 30 30 30 30
+I (7354) Main_app: 30 30 30 30 30 30 39 45 43 37 38 45 43 37 38 30
+I (7364) Main_app: 36 30 31 32 30 30 30 30 30 30 31 30 32 35 38 30
+I (7374) Main_app: 30 30 30 30 36 30 34 30 30 31 41 37 44 0d 0a 3a
+I (7374) Main_app: 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d 0a
+I (7384) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (7384) Main_app: 0a 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30
+I (7394) Main_app: 30 30 30 32 34 46 0d 0a 3a 30 33 30 33 30 30 41
+I (7404) Main_app: 30 30 30 30 32 35 38 0d 0a 3a 30 33 30 33 30 34
+I (7404) Main_app: 30 30 37 44 30 39 31 41 35 36 0d 0a 3a 30 33 30
+I (7414) Main_app: 33 30 30 30 31 30 30 30 33 46 36 0d 0a 3a 30 33
+I (7414) Main_app: 30 33 30 36 30 30 31 30 30 30 43 38 30 30 31 45
+I (7424) Main_app: 46 45 0d 0a 3a 30 33 31 30 30 30 43 38 30 30 31
+I (7424) Main_app: 45 33 43 30 30 44 45 30 30 36 35 37 32 32 30 30
+I (7434) Main_app: 38 30 32 30 30 30 30 30 37 44 30 30 30 30 30 30
+I (7444) Main_app: 31 30 30 30 30 30 30 30 38 30 32 30 30 30 30 30
+I (7444) Main_app: 36 41 34 30 30 30 30 35 43 35 43 30 30 30 30 30
+I (7454) Main_app: 30 30 30 30 34 42 30 30 30 30 30 30 30 30 30 30
+I (7454) Main_app: 30 30 30 30 30 30 41 45 43 37 38 45 43 37 38 30
+I (7464) Main_app: 36 30 31 32 30 30 30 30 30 30 31 30 32 35 38 30
+I (7474) Main_app: 30 30 30 30 36 30 34 30 30 31 41 37 43 0d 0a 3a
+I (7474) Main_app: 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d 0a
+I (7484) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (7484) Main_app: 0a 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30
+I (7494) Main_app: 30 30 30 32 34 46 0d 0a 3a 30 33 30 33 30 30 41
+I (7504) Main_app: 30 30 30 30 32 35 38 0d 0a 3a 30 33 30 33 30 34
+I (7504) Main_app: 30 30 37 44 30 39 31 41 35 36 0d 0a 3a 30 33 30
+I (7514) Main_app: 33 30 30 30 31 30 30 30 33 46 36 0d 0a 3a 30 33
+I (7514) Main_app: 30 33 30 36 30 30 31 30 30 30 43 38 30 30 31 45
+I (7524) Main_app: 46 45 0d 0a 3a 30 33 31 30 30 30 43 38 30 30 31
+I (7534) Main_app: 45 33 43 30 30 44 45 30 30 36 35 37 32 32 30 30
+I (7534) Main_app: 38 30 32 30 30 30 30 30 37 44 30 30 30 30 30 30
+I (7544) Main_app: 31 30 30 30 30 30 30 30 38 30 32 30 30 30 30 30
+I (7544) Main_app: 36 41 34 30 30 30 30 35 43 35 43 30 30 30 30 30
+I (7554) Main_app: 30 30 30 30 34 42 30 30 30 30 30 30 30 30 30 30
+I (7554) Main_app: 30 30 30 30 30 30 42 45 43 37 38 45 43 37 38 30
+I (7564) Main_app: 36 30 31 32 30 30 30 30 30 30 31 30 32 35 38 30
+I (7574) Main_app: 30 30 30 30 36 30 34 30 30 31 41 37 42 0d 0a 3a
+I (7574) Main_app: 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d 0a
+I (7584) Main_app: 3a 31 34 30 33 30 30 30 31 30 30 30 33 45 35 0d
+I (7584) Main_app: 0a 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36
+I (7594) Main_app: 0d 0a 3a 30 33 30 33 30 36 30 30 30 33 30 30 41
+I (7604) Main_app: 30 30 30 30 32 34 46 0d 0a 3a 30 33 30 33 30 30
+I (7604) Main_app: 41 30 30 30 30 32 35 38 0d 0a 3a 30 33 30 33 30
+I (7614) Main_app: 34 30 30 37 44 30 39 31 41 35 36 0d 0a 3a 30 33
+I (7614) Main_app: 30 33 30 30 30 31 30 30 30 33 46 36 0d 0a 3a 30
+I (7624) Main_app: 33 30 33 30 36 30 30 31 30 30 30 43 38 30 30 31
+I (7634) Main_app: 45 46 45 0d 0a 3a 30 33 31 30 30 30 43 38 30 30
+I (7634) Main_app: 31 45 33 43 30 30 44 45 30 30 36 35 37 32 32 30
+I (7644) Main_app: 30 38 30 32 30 30 30 30 30 37 44 30 30 30 30 30
+I (7644) Main_app: 30 31 30 30 30 30 30 30 30 38 30 32 30 30 30 30
+I (7654) Main_app: 30 36 41 34 30 30 30 30 35 43 35 43 30 30 30 30
+I (7664) Main_app: Read 163 bytes:
+I (7664) Main_app: 30 30 30 30 30 34 42 30 30 30 30 30 30 30 30 30
+I (7664) Main_app: 30 30 30 30 30 30 30 43 45 43 37 38 45 43 37 38
+I (7674) Main_app: 30 36 30 31 32 30 30 30 30 30 30 31 30 30 30 30
+I (7684) Main_app: 30 31 30 32 35 38 30 30 30 30 30 36 30 34 30 30
+I (7684) Main_app: 31 41 31 33 0d 0a 3a 30 33 31 30 30 30 43 38 30
+I (7694) Main_app: 30 31 45 30 37 0d 0a 3a 30 33 30 33 30 30 30 31
+I (7694) Main_app: 30 30 30 33 46 36 0d 0a 3a 30 33 30 33 30 36 30
+I (7704) Main_app: 30 30 33 30 30 41 30 30 30 30 32 34 46 0d 0a 3a
+I (7714) Main_app: 30 33 30 33 30 30 41 30 30 30 30 32 35 38 0d 0a
+I (7714) Main_app: 3a 30 33 30 33 30 34 30 30 37 44 30 39 31 41 35
+I (7724) Main_app: 36 0d 0a
+I (7944) Main_app: Read 17 bytes:
+I (7944) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (7944) Main_app: 0a
+I (7984) Main_app: Read 23 bytes:
+I (7984) Main_app: 3a 30 33 30 33 30 36 30 30 31 30 30 30 43 38 30
+I (7984) Main_app: 30 31 45 46 45 0d 0a
+I (8184) Main_app: Read 120 bytes:
+I (8184) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 33 43 30
+I (8184) Main_app: 30 44 45 30 30 36 35 37 32 32 30 30 38 30 32 30
+I (8194) Main_app: 30 30 30 30 37 44 30 30 30 30 30 30 31 30 30 30
+I (8194) Main_app: 30 30 30 30 38 30 32 30 30 30 30 30 36 41 34 30
+I (8204) Main_app: 30 30 30 35 43 35 43 30 30 30 30 30 30 30 30 30
+I (8214) Main_app: 34 42 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+I (8214) Main_app: 30 30 45 45 43 37 38 45 43 37 38 30 36 30 31 32
+I (8224) Main_app: 30 30 30 30 30 30 31 30
+I (8224) Main_app: Read 19 bytes:
+I (8224) Main_app: 32 35 38 30 30 30 30 30 36 30 34 30 30 31 41 37
+I (8234) Main_app: 38 0d 0a
+I (8254) Main_app: Read 17 bytes:
+I (8254) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d
+I (8254) Main_app: 0a
+I (8594) Main_app: Read 17 bytes:
+I (8594) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (8594) Main_app: 0a
+I (8634) Main_app: Read 23 bytes:
+I (8634) Main_app: 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30 30
+I (8634) Main_app: 30 30 32 34 46 0d 0a
+I (8744) Main_app: Read 17 bytes:
+I (8744) Main_app: 3a 30 33 30 33 30 30 41 30 30 30 30 32 35 38 0d
+I (8744) Main_app: 0a
+I (8784) Main_app: Read 19 bytes:
+I (8784) Main_app: 3a 30 33 30 33 30 34 30 30 37 44 30 39 31 41 35
+I (8784) Main_app: 36 0d 0a
+I (9144) Main_app: Read 17 bytes:
+I (9144) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (9144) Main_app: 0a
+I (9184) Main_app: Read 23 bytes:
+I (9184) Main_app: 3a 30 33 30 33 30 36 30 30 31 30 30 30 43 38 30
+I (9184) Main_app: 30 31 45 46 45 0d 0a
+I (9384) Main_app: Read 120 bytes:
+I (9384) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 33 43 30
+I (9394) Main_app: 30 44 45 30 30 36 35 37 32 32 30 30 38 30 32 30
+I (9394) Main_app: 30 30 30 30 37 44 30 30 30 30 30 30 31 30 30 30
+I (9394) Main_app: 30 30 30 30 38 30 32 30 30 30 30 30 36 41 34 30
+I (9404) Main_app: 30 30 30 35 43 35 43 30 30 30 30 30 30 30 30 30
+I (9414) Main_app: 34 42 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+I (9414) Main_app: 30 30 46 30 30 30 30 30 30 30 30 30 36 30 31 32
+I (9424) Main_app: 30 30 30 30 30 30 31 30
+I (9424) Main_app: Read 19 bytes:
+I (9424) Main_app: 32 35 38 30 30 30 30 30 36 30 34 30 30 31 41 33
+I (9434) Main_app: 46 0d 0a
+I (9454) Main_app: Read 17 bytes:
+I (9454) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d
+I (9454) Main_app: 0a
+I (9794) Main_app: Read 17 bytes:
+I (9794) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (9794) Main_app: 0a
+I (9834) Main_app: Read 23 bytes:
+I (9834) Main_app: 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30 30
+I (9834) Main_app: 30 30 32 34 46 0d 0a
+I (9944) Main_app: Read 17 bytes:
+I (9944) Main_app: 3a 30 33 30 33 30 30 41 30 30 30 30 32 35 38 0d
+I (9944) Main_app: 0a
+I (9984) Main_app: Read 19 bytes:
+I (9984) Main_app: 3a 30 33 30 33 30 34 30 30 37 44 30 39 31 41 35
+I (9984) Main_app: 36 0d 0a
+I (10344) Main_app: Read 17 bytes:
+I (10344) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (10344) Main_app: 0a
+I (10384) Main_app: Read 23 bytes:
+I (10384) Main_app: 3a 30 33 30 33 30 36 30 30 31 30 30 30 43 38 30
+I (10384) Main_app: 30 31 45 46 45 0d 0a
+I (10594) Main_app: Read 120 bytes:
+I (10594) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 33 43 30
+I (10594) Main_app: 30 44 45 30 30 36 35 37 32 32 30 30 38 30 32 30
+I (10594) Main_app: 30 30 30 30 37 44 30 30 30 30 30 30 31 30 30 30
+I (10604) Main_app: 30 30 30 30 38 30 32 30 30 30 30 30 36 41 34 30
+I (10604) Main_app: 30 30 30 35 43 35 43 30 30 30 30 30 30 30 30 30
+I (10614) Main_app: 34 42 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+I (10614) Main_app: 34 30 31 30 38 38 34 30 31 39 30 30 36 30 31 32
+I (10624) Main_app: 30 30 30 30 30 30 31 30
+I (10624) Main_app: Read 19 bytes:
+I (10634) Main_app: 32 35 38 30 30 30 30 30 36 30 34 30 30 31 41 32
+I (10634) Main_app: 43 0d 0a
+I (10654) Main_app: Read 17 bytes:
+I (10654) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d
+I (10654) Main_app: 0a
+I (10994) Main_app: Read 17 bytes:
+I (10994) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (10994) Main_app: 0a
+I (11034) Main_app: Read 23 bytes:
+I (11034) Main_app: 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30 30
+I (11034) Main_app: 30 30 32 34 46 0d 0a
+I (11144) Main_app: Read 17 bytes:
+I (11144) Main_app: 3a 30 33 30 33 30 30 41 30 30 30 30 32 35 38 0d
+I (11144) Main_app: 0a
+I (11184) Main_app: Read 19 bytes:
+I (11184) Main_app: 3a 30 33 30 33 30 34 30 30 37 44 30 39 31 41 35
+I (11184) Main_app: 36 0d 0a
+I (11544) Main_app: Read 17 bytes:
+I (11544) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (11544) Main_app: 0a
+I (11584) Main_app: Read 23 bytes:
+I (11584) Main_app: 3a 30 33 30 33 30 36 30 30 31 30 30 30 43 38 30
+I (11584) Main_app: 30 31 45 46 45 0d 0a
+I (11794) Main_app: Read 120 bytes:
+I (11794) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 33 43 30
+I (11794) Main_app: 30 44 45 30 30 36 35 37 32 32 30 30 38 30 32 30
+I (11794) Main_app: 30 30 30 30 37 44 30 30 30 30 30 30 31 30 30 30
+I (11804) Main_app: 30 30 30 30 38 30 32 30 30 30 30 30 36 41 34 30
+I (11804) Main_app: 30 30 30 35 43 35 43 30 30 30 30 30 30 30 30 30
+I (11814) Main_app: 34 42 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+I (11814) Main_app: 33 30 32 30 36 34 41 30 36 34 30 30 36 30 31 32
+I (11824) Main_app: 30 30 30 30 30 30 31 30
+I (11824) Main_app: Read 19 bytes:
+I (11834) Main_app: 32 35 38 30 30 30 30 30 36 30 34 30 30 31 41 42
+I (11834) Main_app: 33 0d 0a
+I (11854) Main_app: Read 17 bytes:
+I (11854) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d
+I (11864) Main_app: 0a
+I (12194) Main_app: Read 17 bytes:
+I (12194) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (12194) Main_app: 0a
+I (12234) Main_app: Read 23 bytes:
+I (12234) Main_app: 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30 30
+I (12234) Main_app: 30 30 32 34 46 0d 0a
+E (12274) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:
+E (12274) task_wdt:  - IDLE (CPU 0)
+E (12274) task_wdt: Tasks currently running:
+E (12274) task_wdt: CPU 0: main
+E (12274) task_wdt: Print CPU 0 (current core) registers
+Core  0 register dump:
+MEPC    : 0x40806182  RA      : 0x408067a4  SP      : 0x40813200  GP      : 0x4080dd14  
+--- 0x40806182: prvReceiveGeneric at D:/10-Development/esp/v5.5/esp-idf/components/esp_ringbuf/ringbuf.c:832
+--- 0x408067a4: xRingbufferReceiveUpTo at D:/10-Development/esp/v5.5/esp-idf/components/esp_ringbuf/ringbuf.c:1182
+TP      : 0x40813330  T0      : 0x40028192  T1      : 0x10000000  T2      : 0x30363033  
+--- 0x40028192: __retarget_lock_release_recursive in ROM
+S0/FP   : 0x00000001  S1      : 0x4080f890  A0      : 0x4087d434  A1      : 0x4081325c  
+A2      : 0x00000000  A3      : 0x4081327c  A4      : 0x00000000  A5      : 0x00000400  
+A6      : 0x00000000  A7      : 0x0000000a  S2      : 0x00000000  S3      : 0x00000400  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x4080f890  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x3a0a0d46  T5      : 0x34323030  T6      : 0x30304130  
+MSTATUS : 0x00001889  MTVEC   : 0x40800001  MCAUSE  : 0xdeadc0de  MTVAL   : 0xdeadc0de  
+--- 0x40800001: _vector_table at D:/10-Development/esp/v5.5/esp-idf/components/riscv/vectors_intc.S:54
+MHARTID : 0x00000000  
+Please enable CONFIG_ESP_SYSTEM_USE_FRAME_POINTER option to have a full backtrace.
+I (12374) Main_app: Read 36 bytes:
+I (12374) Main_app: 3a 30 33 30 33 30 30 41 30 30 30 30 32 35 38 0d
+I (12384) Main_app: 0a 3a 30 33 30 33 30 34 30 30 37 44 30 39 31 41
+I (12394) Main_app: 35 36 0d 0a
+I (12744) Main_app: Read 17 bytes:
+I (12744) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (12744) Main_app: 0a
+I (12784) Main_app: Read 23 bytes:
+I (12784) Main_app: 3a 30 33 30 33 30 36 30 30 31 30 30 30 43 38 30
+I (12794) Main_app: 30 31 45 46 45 0d 0a
+I (12994) Main_app: Read 120 bytes:
+I (12994) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 33 43 30
+I (12994) Main_app: 30 44 45 30 30 36 35 37 32 32 30 30 38 30 32 30
+I (12994) Main_app: 30 30 30 30 37 44 30 30 30 30 30 30 31 30 30 30
+I (13004) Main_app: 30 30 30 30 38 30 32 30 30 30 30 30 36 41 34 30
+I (13014) Main_app: 30 30 30 35 43 35 43 30 30 30 30 30 30 30 30 30
+I (13014) Main_app: 34 42 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+I (13024) Main_app: 42 30 33 30 42 43 32 30 31 39 30 30 36 30 31 32
+I (13024) Main_app: 30 30 30 30 30 30 31 30
+I (13034) Main_app: Read 19 bytes:
+I (13034) Main_app: 32 35 38 30 30 30 30 30 36 30 34 30 30 31 41 45
+I (13044) Main_app: 32 0d 0a
+I (13064) Main_app: Read 17 bytes:
+I (13064) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d
+I (13064) Main_app: 0a
+I (13394) Main_app: Read 17 bytes:
+I (13394) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (13394) Main_app: 0a
+I (13434) Main_app: Read 23 bytes:
+I (13434) Main_app: 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30 30
+I (13444) Main_app: 30 30 32 34 46 0d 0a
+I (13544) Main_app: Read 17 bytes:
+I (13544) Main_app: 3a 30 33 30 33 30 30 41 30 30 30 30 32 35 38 0d
+I (13544) Main_app: 0a
+I (13584) Main_app: Read 19 bytes:
+I (13584) Main_app: 3a 30 33 30 33 30 34 30 30 37 44 30 39 31 41 35
+I (13584) Main_app: 36 0d 0a
+I (13944) Main_app: Read 17 bytes:
+I (13944) Main_app: 3a 30 41 30 33 30 30 30 31 30 30 30 33 45 46 0d
+I (13944) Main_app: 0a
+I (14744) Main_app: Read 17 bytes:
+I (14744) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (14744) Main_app: 0a
+I (14794) Main_app: Read 23 bytes:
+I (14794) Main_app: 3a 30 33 30 33 30 36 30 30 31 30 30 30 43 38 30
+I (14794) Main_app: 30 31 45 46 45 0d 0a
+I (14994) Main_app: Read 120 bytes:
+I (14994) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 33 43 30
+I (14994) Main_app: 30 44 45 30 30 36 35 37 32 32 30 30 38 30 32 30
+I (15004) Main_app: 30 30 30 30 37 44 30 30 30 30 30 30 31 30 30 30
+I (15004) Main_app: 30 30 30 30 38 30 32 30 30 30 30 30 36 41 34 30
+I (15014) Main_app: 30 30 30 35 43 35 43 30 30 30 30 30 30 30 30 30
+I (15014) Main_app: 34 42 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+I (15024) Main_app: 36 30 34 30 38 38 34 45 43 37 38 30 36 30 31 32
+I (15034) Main_app: 30 30 30 30 30 30 31 30
+I (15034) Main_app: Read 19 bytes:
+I (15034) Main_app: 32 35 38 30 30 30 30 30 36 30 34 30 30 31 41 35
+I (15044) Main_app: 34 0d 0a
+I (15064) Main_app: Read 17 bytes:
+I (15064) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d
+I (15064) Main_app: 0a
+I (15394) Main_app: Read 17 bytes:
+I (15394) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (15394) Main_app: 0a
+I (15444) Main_app: Read 23 bytes:
+I (15444) Main_app: 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30 30
+I (15444) Main_app: 30 30 32 34 46 0d 0a
+I (15544) Main_app: Read 17 bytes:
+I (15544) Main_app: 3a 30 33 30 33 30 30 41 30 30 30 30 32 35 38 0d
+I (15544) Main_app: 0a
+I (15584) Main_app: Read 19 bytes:
+I (15584) Main_app: 3a 30 33 30 33 30 34 30 30 37 44 30 39 31 41 35
+I (15584) Main_app: 36 0d 0a
+I (15944) Main_app: Read 17 bytes:
+I (15944) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (15944) Main_app: 0a
+I (15994) Main_app: Read 23 bytes:
+I (15994) Main_app: 3a 30 33 30 33 30 36 30 30 31 30 30 30 43 38 30
+I (15994) Main_app: 30 31 45 46 45 0d 0a
+I (16194) Main_app: Read 120 bytes:
+I (16194) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 33 43 30
+I (16194) Main_app: 30 44 45 30 30 36 35 37 32 32 30 30 38 30 32 30
+I (16194) Main_app: 30 30 30 30 37 44 30 30 30 30 30 30 31 30 30 30
+I (16204) Main_app: 30 30 30 30 38 30 32 30 30 30 30 30 36 41 34 30
+I (16204) Main_app: 30 30 30 35 43 35 43 30 30 30 30 30 30 30 30 30
+I (16214) Main_app: 34 42 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+I (16224) Main_app: 30 30 35 45 43 37 38 45 43 37 38 30 36 30 31 32
+I (16224) Main_app: 30 30 30 30 30 30 31 30
+I (16234) Main_app: Read 19 bytes:
+I (16234) Main_app: 32 35 38 30 30 30 30 30 36 30 34 30 30 31 41 38
+I (16244) Main_app: 31 0d 0a
+I (16264) Main_app: Read 17 bytes:
+I (16264) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d
+I (16264) Main_app: 0a
+I (16594) Main_app: Read 17 bytes:
+I (16594) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (16594) Main_app: 0a
+I (16644) Main_app: Read 23 bytes:
+I (16644) Main_app: 3a 30 33 30 33 30 36 30 30 30 33 30 30 41 30 30
+I (16644) Main_app: 30 30 32 34 46 0d 0a
+I (16744) Main_app: Read 17 bytes:
+I (16744) Main_app: 3a 30 33 30 33 30 30 41 30 30 30 30 32 35 38 0d
+I (16744) Main_app: 0a
+I (16784) Main_app: Read 19 bytes:
+I (16784) Main_app: 3a 30 33 30 33 30 34 30 30 37 44 30 39 31 41 35
+I (16784) Main_app: 36 0d 0a
+I (17144) Main_app: Read 17 bytes:
+I (17144) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (17144) Main_app: 0a
+I (17194) Main_app: Read 23 bytes:
+I (17194) Main_app: 3a 30 33 30 33 30 36 30 30 31 30 30 30 43 38 30
+I (17194) Main_app: 30 31 45 46 45 0d 0a
+E (17274) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:
+E (17274) task_wdt:  - IDLE (CPU 0)
+E (17274) task_wdt: Tasks currently running:
+E (17274) task_wdt: CPU 0: main
+E (17274) task_wdt: Print CPU 0 (current core) registers
+Core  0 register dump:
+MEPC    : 0x4080807c  RA      : 0x4080810e  SP      : 0x40813230  GP      : 0x4080dd14  
+--- 0x4080807c: vPortClearInterruptMaskFromISR at D:/10-Development/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:514
+--- 0x4080810e: vPortExitCritical at D:/10-Development/esp/v5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:627
+TP      : 0x40813330  T0      : 0x40028192  T1      : 0x10000000  T2      : 0x30303030  
+--- 0x40028192: __retarget_lock_release_recursive in ROM
+S0/FP   : 0x4087d904  S1      : 0x00000000  A0      : 0x00000001  A1      : 0x00000000  
+A2      : 0x00000400  A3      : 0x00000004  A4      : 0x00000000  A5      : 0x20001000  
+A6      : 0x00000001  A7      : 0x0000000a  S2      : 0x00000000  S3      : 0x00000400  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x4080f890  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x00000000  T4      : 0x30303030  T5      : 0x30303030  T6      : 0x30304234  
+MSTATUS : 0x00001889  MTVEC   : 0x40800001  MCAUSE  : 0xdeadc0de  MTVAL   : 0xdeadc0de  
+--- 0x40800001: _vector_table at D:/10-Development/esp/v5.5/esp-idf/components/riscv/vectors_intc.S:54
+MHARTID : 0x00000000  
+Please enable CONFIG_ESP_SYSTEM_USE_FRAME_POINTER option to have a full backtrace.
+I (17394) Main_app: Read 120 bytes:
+I (17394) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 33 43 30
+I (17394) Main_app: 30 44 45 30 30 36 35 37 32 32 30 30 38 30 32 30
+I (17394) Main_app: 30 30 30 30 37 44 30 30 30 30 30 30 31 30 30 30
+I (17404) Main_app: 30 30 30 30 38 30 32 30 30 30 30 30 36 41 34 30
+I (17404) Main_app: 30 30 30 35 43 35 43 30 30 30 30 30 30 30 30 30
+I (17414) Main_app: 34 42 30 30 30 30 30 30 30 30 30 30 30 30 30 30
+I (17424) Main_app: 30 30 36 45 43 37 38 45 43 37 38 30 36 30 31 32
+I (17424) Main_app: 30 30 30 30 30 30 31 30
+I (17434) Main_app: Read 19 bytes:
+I (17434) Main_app: 32 35 38 30 30 30 30 30 36 30 34 30 30 31 41 38
+I (17444) Main_app: 30 0d 0a
+I (17464) Main_app: Read 17 bytes:
+I (17464) Main_app: 3a 30 33 31 30 30 30 43 38 30 30 31 45 30 37 0d
+I (17464) Main_app: 0a
+I (17794) Main_app: Read 17 bytes:
+I (17794) Main_app: 3a 30 33 30 33 30 30 30 31 30 30 30 33 46 36 0d
+I (17794) Main_app: 0a
+I (17844) Main_app: Read 23 bytes:
+I (17844) Main_app: 3a 30 33 30 33 30 36 3
