@@ -1,9 +1,0 @@
-menu "Modbus Configuration"
-
-   config MB_UART_DEBUG
-        bool "Enable debugging Modbus message on terminal"
-        default n
-        help
-            Modbus HEX frame will be outputed on terminal
-
-endmenu
