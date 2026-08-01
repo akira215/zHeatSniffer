@@ -1,0 +1,992 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+
+<tapps classname="TaDocument" main="1683707072355445" show="1683707082985562" mayEdit="true">
+    <title>Modbus.tdw</title>
+    <desc></desc>
+    <version>1.0.14</version>
+    <purpose>uvr</purpose>
+    <o classname="TaDrawing" rootobject="1683707072355429" initialSizeX="100" initialSizeY="100" units_accuracy="0.001" units_scale="0.01" normalize_scale="1" units="mm" units_measure="mm" mayEdit="true" drawingId="a2dDrawingId_cameleonrefs">
+        <pagesetup headerL="" headerM="$[Datei]" headerR="" footerL="" footerM="$[Seite] / $[Seiten]" footerR="" pageWidth="210" pageHeight="297" pagesx="4" pagesy="2" orientation="1" MarginTopLeftx="70" MarginTopLefty="100" MarginBottomRightx="70" MarginBottomRighty="100" headerPosition="50" footerPosition="50"/>
+        <title>top</title>
+        <desc></desc>
+        <drawing>
+            <o classname="a2dCanvasObject" id="1683707072355429">
+                <o classname="a2dCameleon" id="1683707072355445" name="outsideUVR"
+                     transform="translate( 50 1049 )"
+                     appearances="1683707072355446" isMultiRef="true" isTemplate="false" drawingId="a2dDrawingId_noId">
+                    <appearances>
+                        <o classname="TaDrawing" id="1683707072355446" rootobject="1683707072355455" initialSizeX="100" initialSizeY="100" units_accuracy="0.001" units_scale="0.01" normalize_scale="1" units="mm" units_measure="mm" mayEdit="true" drawingId="a2dDrawingId_appearances">
+                            <pagesetup headerL="" headerM="$[Datei]" headerR="" footerL="" footerM="$[Seite] / $[Seiten]" footerR="" pageWidth="210" pageHeight="297" pagesx="4" pagesy="2" orientation="1" MarginTopLeftx="70" MarginTopLefty="100" MarginBottomRightx="70" MarginBottomRighty="100" headerPosition="50" footerPosition="50"/>
+                            <title>outsideUVR</title>
+                            <desc></desc>
+                            <drawing>
+                                <o classname="a2dCanvasObject" id="1683707072355455">
+                                    <o classname="a2dDiagram"
+                                         transform="translate( 0 50 )"
+                                         drawing="1683707072355462">
+                                        
+                                        <properties>
+                                            <o classname="a2dStringProperty" name="Name" value="The outside world">
+                                            </o>
+                                        </properties>
+                                        
+                                        <drawing>
+                                            <o classname="TaDrawing" id="1683707072355462" rootobject="1683707072355471" initialSizeX="100" initialSizeY="100" units_accuracy="0.001" units_scale="0.01" normalize_scale="1" units="mm" units_measure="mm" mayEdit="true" drawingId="a2dDrawingId_physical">
+                                                <pagesetup headerL="" headerM="$[Datei]" headerR="" footerL="" footerM="$[Seite] / $[Seiten]" footerR="" pageWidth="210" pageHeight="297" pagesx="4" pagesy="2" orientation="1" MarginTopLeftx="70" MarginTopLefty="100" MarginBottomRightx="70" MarginBottomRighty="100" headerPosition="50" footerPosition="50"/>
+                                                <title>outsideUVR</title>
+                                                <desc></desc>
+                                                <drawing>
+                                                    <o classname="a2dCanvasObject" id="1683707072355471">
+                                                        <o classname="CANBC2" uvrModel="1" flags=" visible(0) fixedStyle" drawing="1683707082985553">
+                                                            <uvr block="GeraeteEinst">
+                                                                <wert name="Kontr" val="500"/>
+                                                                <wert name="Hell" val="1000"/>
+                                                                <wert name="DisTO" val="30"/>
+                                                                <wert name="SLed" val="0"/>
+                                                                <wert name="DrAuto" val="0"/>
+                                                                <wert name="DrZt" val="3600"/>
+                                                                <wert name="Waehr" val="1"/>
+                                                                <wert name="Stromw" val="0"/>
+                                                                <wert name="PhNb" val="0"/>
+                                                                <wert name="S0Ausg" val="0"/>
+                                                                <wert name="S0Imp" val="3"/>
+                                                                <wert name="FachCode" text="64"/>
+                                                                <wert name="ExpCode" text="128"/>
+                                                                <wert name="Menu" val="0"/>
+                                                                <wert name="AutoZU" val="1"/>
+                                                                <wert name="Zeitz" val="60"/>
+                                                                <wert name="GPSB" val="48836500"/>
+                                                                <wert name="GPSL" val="15080000"/>
+                                                                <wert name="SpracheBDB" text="none"/>
+                                                            </uvr>
+                                                            <uvr block="BDBListe">
+                                                                <bdb name="bdb0" text="T.WP VL SOLL"/>
+                                                                <bdb name="bdb1" text="I.WP Wetterabh Betrieb"/>
+                                                                <bdb name="bdb2" text="I.WP Betriebsart"/>
+                                                                <bdb name="bdb3" text="S.Raumheizen"/>
+                                                                <bdb name="bdb4" text="T.WP WW Soll"/>
+                                                                <bdb name="bdb5" text="S.WP WW Nacherwärmen"/>
+                                                                <bdb name="bdb6" text="S.WP Zusatzheizbetrieb"/>
+                                                                <bdb name="bdb7" text="T.WP Offset Heizen"/>
+                                                                <bdb name="bdb8" text="S.WP Umwälzpumpe IST"/>
+                                                                <bdb name="bdb9" text="S.WP Zusatzheizb. IST"/>
+                                                                <bdb name="bdb10" text="I.WP 3 Wege Ventil IST"/>
+                                                                <bdb name="bdb11" text="T.WP Rücklauf IST"/>
+                                                                <bdb name="bdb12" text="T.WP WW IST"/>
+                                                                <bdb name="bdb13" text="T.WP Aussen IST"/>
+                                                                <bdb name="bdb14" text="WP Fixtemperaturbetrieb"/>
+                                                                <bdb name="bdb15" text="WP Wetterabhängig"/>
+                                                                <bdb name="bdb16" text="S.Poolheizung"/>
+                                                                <bdb name="bdb17" text="S.Raumheizen IST"/>
+                                                                <bdb name="bdb18" text="Freigabe Raumheizung"/>
+                                                            </uvr>
+                                                            <uvr block="CAN">
+                                                                <wert name="Knot" val="48"/>
+                                                                <wert name="Busr" val="3"/>
+                                                                <wert name="Bez" text="CAN-BC2"/>
+                                                                <nwe name="D1" bgrp="4" bnr="16" bidx="0" knot="3" ausg="1" tmot="20" nueh="0" einhd="0" vhwto="0" wtoAE="0" wtoNJ="0"/>
+                                                                <nwe name="D2" bgrp="4" bnr="3" bidx="0" knot="2" ausg="2" tmot="20" nueh="0" einhd="0" vhwto="0" wtoAE="0" wtoNJ="0"/>
+                                                                <nwa name="A1" bgrp="30" bnr="4" bidx="2" int="5" blo="10" senda="0">
+                                                                    <ev name="NWAA1" qu="11" fid="0" wert="0" eanr="4" avi="0" spin="true"/>
+                                                                </nwa>
+                                                                <nwa name="A2" bgrp="30" bnr="5" bidx="2" int="5" blo="10" senda="0">
+                                                                    <ev name="NWAA2" qu="11" fid="0" wert="0" eanr="6" avi="0" spin="true"/>
+                                                                </nwa>
+                                                                <nwa name="A3" bgrp="30" bnr="11" bidx="2" int="5" blo="10" senda="0">
+                                                                    <ev name="NWAA3" qu="11" fid="0" wert="0" eanr="12" avi="0" spin="true"/>
+                                                                </nwa>
+                                                                <nwa name="A4" bgrp="30" bnr="12" bidx="2" int="5" blo="10" senda="0">
+                                                                    <ev name="NWAA4" qu="11" fid="0" wert="0" eanr="13" avi="0" spin="true"/>
+                                                                </nwa>
+                                                                <nwa name="A5" bgrp="30" bnr="10" bidx="2" int="5" blo="10" senda="0">
+                                                                    <ev name="NWAA5" qu="11" fid="0" wert="0" eanr="11" avi="0" spin="true"/>
+                                                                </nwa>
+                                                                <nwa name="A6" bgrp="30" bnr="8" bidx="2" int="5" blo="10" senda="10">
+                                                                    <ev name="NWAA6" qu="11" fid="0" wert="0" eanr="9" avi="0" spin="true"/>
+                                                                </nwa>
+                                                                <nwa name="A7" bgrp="30" bnr="1" bidx="2" int="5" blo="10" senda="0">
+                                                                    <ev name="NWAA7" qu="11" fid="0" wert="0" eanr="2" avi="0" spin="true"/>
+                                                                </nwa>
+                                                                <nwa name="A8" bgrp="30" bnr="17" bidx="2" int="5" blo="10" senda="10">
+                                                                    <ev name="NWAA8" qu="11" fid="0" wert="0" eanr="5" avi="0" spin="true"/>
+                                                                </nwa>
+                                                                <nwa name="A9" bgrp="30" bnr="0" bidx="2" int="5" blo="10" senda="0">
+                                                                    <ev name="NWAA9" qu="11" fid="0" wert="0" eanr="1" avi="0" spin="true"/>
+                                                                </nwa>
+                                                            </uvr>
+                                                            <uvr block="CAN2">
+                                                                <wert name="Busr" val="3"/>
+                                                            </uvr>
+                                                            <uvr block="DL">
+                                                                <wert name="DAusg" val="1"/>
+                                                            </uvr>
+                                                            <uvr block="DatLog">
+                                                                <wert name="Interv" val="30"/>
+                                                                <wert name="SDLog" val="0"/>
+                                                                <ev name="A1" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A2" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A3" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A4" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A5" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A6" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A7" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A8" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A9" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A10" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A11" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A12" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A13" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A14" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A15" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A16" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A17" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A18" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A19" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A20" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A21" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A22" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A23" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A24" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A25" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A26" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A27" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A28" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A29" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A30" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A31" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A32" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A33" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A34" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A35" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A36" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A37" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A38" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A39" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A40" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A41" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A42" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A43" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A44" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A45" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A46" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A47" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A48" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A49" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A50" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A51" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A52" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A53" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A54" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A55" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A56" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A57" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A58" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A59" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A60" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A61" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A62" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A63" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="A64" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D1" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D2" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D3" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D4" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D5" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D6" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D7" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D8" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D9" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D10" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D11" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D12" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D13" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D14" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D15" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D16" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D17" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D18" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D19" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D20" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D21" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D22" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D23" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D24" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D25" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D26" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D27" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D28" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D29" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D30" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D31" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D32" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D33" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D34" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D35" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D36" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D37" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D38" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D39" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D40" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D41" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D42" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D43" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D44" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D45" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D46" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D47" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D48" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D49" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D50" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D51" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D52" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D53" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D54" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D55" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D56" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D57" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D58" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D59" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D60" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D61" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D62" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D63" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                <ev name="D64" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                            </uvr>
+                                                            <uvr block="Fixwerte">
+                                                                <fix nr="1" bgrp="0" bnr="1" bidx="0" typ="2" bed="0" fgrana="4" fixw="430" min="200" max="450"/>
+                                                                <fix nr="2" bgrp="1" bnr="15" bidx="0" typ="2" bed="0" fgrana="0" fixw="1" min="0" max="3"/>
+                                                                <fix nr="3" bgrp="1" bnr="14" bidx="0" typ="2" bed="0" fgrana="0" fixw="0" min="0" max="3"/>
+                                                            </uvr>
+                                                            <uvr block="MBus">
+                                                                <wert name="Baud" val="3"/>
+                                                                <wert name="Intzt" val="60"/>
+                                                                <ger nr="1" fg="0" adr="0"/>
+                                                                <ger nr="2" fg="0" adr="0"/>
+                                                                <ger nr="3" fg="0" adr="0"/>
+                                                                <ger nr="4" fg="0" adr="0"/>
+                                                                <ger nr="5" fg="0" adr="0"/>
+                                                                <ger nr="6" fg="0" adr="0"/>
+                                                                <ger nr="7" fg="0" adr="0"/>
+                                                                <ger nr="8" fg="0" adr="0"/>
+                                                            </uvr>
+                                                            <uvr block="Modbus">
+                                                                <wert name="MaSl" val="0"/>
+                                                                <wert name="Ger" val="1"/>
+                                                                <wert name="Baud" val="3"/>
+                                                                <wert name="ParB" val="2"/>
+                                                                <wert name="Stop" val="1"/>
+                                                                <modbe nr="1" bgrp="30" bnr="0" bidx="0" typ="2" ger="2" funk="3" adr="1" ivzt="10" dtyp="2" bord="0" teil="1" fakt="10" einha="4" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="2" bgrp="30" bnr="1" bidx="0" typ="2" ger="2" funk="3" adr="53" ivzt="10" dtyp="2" bord="0" teil="1" fakt="1" einha="0" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="3" bgrp="30" bnr="2" bidx="2" typ="2" ger="2" funk="3" adr="3" ivzt="10" dtyp="2" bord="0" teil="1" fakt="1" einha="0" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="4" bgrp="30" bnr="4" bidx="0" typ="2" ger="2" funk="3" adr="10" ivzt="10" dtyp="2" bord="0" teil="1" fakt="10" einha="4" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="5" bgrp="30" bnr="17" bidx="0" typ="2" ger="2" funk="3" adr="4" ivzt="10" dtyp="2" bord="0" teil="1" fakt="1" einha="0" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="6" bgrp="30" bnr="5" bidx="0" typ="2" ger="2" funk="3" adr="12" ivzt="10" dtyp="2" bord="0" teil="1" fakt="1" einha="0" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="7" bgrp="30" bnr="6" bidx="0" typ="2" ger="2" funk="3" adr="13" ivzt="10" dtyp="2" bord="0" teil="1" fakt="1" einha="0" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="8" bgrp="30" bnr="7" bidx="0" typ="2" ger="2" funk="3" adr="54" ivzt="10" dtyp="2" bord="0" teil="1" fakt="10" einha="4" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="9" bgrp="30" bnr="8" bidx="0" typ="2" ger="2" funk="4" adr="30" ivzt="10" dtyp="2" bord="0" teil="1" fakt="1" einha="0" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="10" bgrp="30" bnr="9" bidx="0" typ="2" ger="2" funk="4" adr="32" ivzt="10" dtyp="2" bord="0" teil="1" fakt="1" einha="0" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="11" bgrp="30" bnr="10" bidx="0" typ="2" ger="2" funk="4" adr="37" ivzt="10" dtyp="2" bord="0" teil="1" fakt="1" einha="0" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="12" bgrp="30" bnr="11" bidx="0" typ="2" ger="2" funk="4" adr="42" ivzt="10" dtyp="2" bord="0" teil="10" fakt="1" einha="4" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="13" bgrp="30" bnr="12" bidx="0" typ="2" ger="2" funk="4" adr="43" ivzt="10" dtyp="2" bord="0" teil="10" fakt="1" einha="4" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modbe nr="14" bgrp="30" bnr="13" bidx="0" typ="2" ger="2" funk="4" adr="44" ivzt="10" dtyp="2" bord="0" teil="10" fakt="1" einha="4" senk="0" wto="0" tmot="0" vhwto="0" schk="0" nkss="0" kss="-1" nksw="0" ksw="0" nubs="0" ubs="1" nubw="0" ubw="0"/>
+                                                                <modba nr="1" bgrp="30" bnr="0" bidx="2" typ="2" ger="2" funk="6" adr="1" dtyp="2" bord="0" ivs="0" senda="1" teil="10" fakt="1" blo="10" ivzt="5">
+                                                                    <ev name="NWA" qu="4" fid="0" wert="0" eanr="1" avi="0" spin="true"/>
+                                                                </modba>
+                                                                <modba nr="2" bgrp="30" bnr="1" bidx="2" typ="2" ger="2" funk="6" adr="53" dtyp="2" bord="0" ivs="0" senda="0" teil="1" fakt="1" blo="10" ivzt="5">
+                                                                    <ev name="NWA" qu="3" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                </modba>
+                                                                <modba nr="3" bgrp="30" bnr="3" bidx="1" typ="2" ger="2" funk="6" adr="4" dtyp="2" bord="0" ivs="0" senda="0" teil="1" fakt="1" blo="10" ivzt="5">
+                                                                    <ev name="NWA" qu="3" fid="3" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                </modba>
+                                                            </uvr>
+                                                            
+                                                            <properties>
+                                                                <o classname="a2dStringProperty" name="Name" value="CAN-BC2">
+                                                                </o>
+                                                            </properties>
+                                                            
+                                                            <drawing>
+                                                                <o classname="TaDrawing" id="1683707082985553" rootobject="1683707082985562" initialSizeX="100" initialSizeY="100" units_accuracy="0.001" units_scale="0.01" normalize_scale="1" units="mm" units_measure="mm" mayEdit="true" drawingId="a2dDrawingId_CanBc2Modb">
+                                                                    <pagesetup headerL="" headerM="$[Datei]" headerR="" footerL="" footerM="$[Seite] / $[Seiten]" footerR="" pageWidth="210" pageHeight="297" pagesx="4" pagesy="2" orientation="1" MarginTopLeftx="70" MarginTopLefty="100" MarginBottomRightx="70" MarginBottomRighty="100" headerPosition="50" footerPosition="50"/>
+                                                                    <title>UVR Diagram</title>
+                                                                    <desc></desc>
+                                                                    <drawing>
+                                                                        <o classname="a2dCanvasObject" id="1683707082985562">
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 800 800 )"
+                                                                                 num="1">
+                                                                                <o classname="TacoPin" id="1685103114882378" name="Out" resolveid="1684835429123834">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 700 6200 )"
+                                                                                 num="2">
+                                                                                <o classname="TacoPin" id="1685103114882389" name="Out" resolveid="1684835313844087">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 800 1500 )"
+                                                                                 num="3">
+                                                                                <o classname="TacoPin" id="1685103114882393" name="Out">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5200 800 )"
+                                                                                 num="9" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114882402" name="In" resolveid="1684835429123838">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5200 2900 )"
+                                                                                 num="8" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114882412" name="In" resolveid="1684835384821844">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5200 3700 )"
+                                                                                 num="1" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114882416" name="In" resolveid="1684436523371105">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 21950 3700 )"
+                                                                                 num="1" typ="1">
+                                                                                <o classname="TacoPin" id="1685103114882426" name="Out" resolveid="1684493772741337">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 700 3700 )"
+                                                                                 num="4">
+                                                                                <o classname="TacoPin" id="1685103114882441" name="Out" resolveid="1684436523371101">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" id="1684834471956877" flags=" fixedStyle"
+                                                                                 transform="translate( 800 2900 )"
+                                                                                 num="5">
+                                                                                <o classname="TacoPin" id="1685103114882450" name="Out" resolveid="1684835384820848">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 700 4500 )"
+                                                                                 num="6">
+                                                                                <o classname="TacoPin" id="1685103114882458" name="Out" resolveid="1684436583071612">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="a2dText"
+                                                                                 transform="translate( 779.155 2375.9 )"
+                                                                                 linespace="24.7"
+                                                                                 text="0.. Auto, 1: Heizen, 2:Kühlen"
+                                                                                 textflags="82" font="Freetype font-Liberation Sans-Regular-247--LiberationSans-Regular.ttf"
+                                                                                 firsteditable="0" alignment="wxMINX|wxMAXY|wxBASELINE_CONTRA">
+                                                                                
+                                                                                <properties>
+                                                                                    <o classname="a2dFillProperty" name="Fill">
+                                                                                        <o classname="a2dFill" type="a2dFILL_ONE_COLOUR" style="a2dFILL_TRANSPARENT">
+                                                                                        </o>
+                                                                                    </o>
+                                                                                    <o classname="a2dStrokeProperty" name="Stroke">
+                                                                                        <o classname="a2dStroke" type="a2dSTROKE_ONE_COLOUR" colour="BLACK">
+                                                                                        </o>
+                                                                                    </o>
+                                                                                    <o classname="a2dBoolProperty" name="SkipBase" value="false">
+                                                                                    </o>
+                                                                                </properties>
+                                                                                
+                                                                            </o>
+                                                                            <o classname="a2dText"
+                                                                                 transform="translate( 563.043 7062.36 )"
+                                                                                 linespace="24.7"
+                                                                                 text="0:fest, 1:Wetterabhängig, \n2:fest+Zeitplan, 3:Wetterabhängig+Zeitplan"
+                                                                                 textflags="82" font="Freetype font-Liberation Sans-Regular-247--LiberationSans-Regular.ttf"
+                                                                                 firsteditable="0" alignment="wxMINX|wxMAXY|wxBASELINE_CONTRA">
+                                                                                
+                                                                                <properties>
+                                                                                    <o classname="a2dFillProperty" name="Fill">
+                                                                                        <o classname="a2dFill" type="a2dFILL_ONE_COLOUR" style="a2dFILL_TRANSPARENT">
+                                                                                        </o>
+                                                                                    </o>
+                                                                                    <o classname="a2dStrokeProperty" name="Stroke">
+                                                                                        <o classname="a2dStroke" type="a2dSTROKE_ONE_COLOUR" colour="BLACK">
+                                                                                        </o>
+                                                                                    </o>
+                                                                                    <o classname="a2dBoolProperty" name="SkipBase" value="false">
+                                                                                    </o>
+                                                                                </properties>
+                                                                                
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 700 5200 )"
+                                                                                 num="7">
+                                                                                <o classname="TacoPin" id="1685103114883386" name="Out">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 800 7800 )"
+                                                                                 num="8">
+                                                                                <o classname="TacoPin" id="1685103114883397" name="Out">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 1000 10300 )"
+                                                                                 num="9">
+                                                                                <o classname="TacoPin" id="1685103114883401" name="Out" resolveid="1684835177843109">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 1000 12200 )"
+                                                                                 num="10">
+                                                                                <o classname="TacoPin" id="1685103114883410" name="Out">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 1000 13100 )"
+                                                                                 num="11">
+                                                                                <o classname="TacoPin" id="1685103114883421" name="Out" resolveid="1684835085232595">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 1000 14000 )"
+                                                                                 num="12">
+                                                                                <o classname="TacoPin" id="1685103114883425" name="Out" resolveid="1684493962234805">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 1000 14800 )"
+                                                                                 num="13">
+                                                                                <o classname="TacoPin" id="1685103114883434" name="Out" resolveid="1684493954047384">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusEingang" flags=" fixedStyle"
+                                                                                 transform="translate( 1000 15700 )"
+                                                                                 num="14">
+                                                                                <o classname="TacoPin" id="1685103114883445" name="Out">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 27600 8600 )"
+                                                                                 num="1">
+                                                                                <o classname="TacoPin" id="1685103114883449" name="In" resolveid="1684323076622688">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoFixwert" flags=" fixedStyle"
+                                                                                 transform="translate( 23500 8750 )"
+                                                                                 num="1">
+                                                                                <o classname="TacoPin" id="1685103114883459" name="Out" resolveid="1684323076622692">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinIn" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684323076622688" name="begin" x="27600" y="8900"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114883449">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684323076622692" name="end" x="26700" y="8900"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114883459">
+                                                                                </o>
+                                                                                <xy x="27600" y="8900"/> <xy x="26700" y="8900"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 30800 4400 )"
+                                                                                 num="2">
+                                                                                <o classname="TacoPin" id="1685103114883483" name="In" resolveid="1684493854116843">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoFixwert" flags=" fixedStyle"
+                                                                                 transform="translate( 21900 4850 )"
+                                                                                 num="2">
+                                                                                <o classname="TacoPin" id="1685103114884353" name="Out" resolveid="1684493898198799">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoFixwert" flags=" fixedStyle"
+                                                                                 transform="translate( 21900 5150 )"
+                                                                                 num="3">
+                                                                                <o classname="TacoPin" id="1685103114884357" name="Out" resolveid="1684493781435905">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684436523371101" name="begin" x="3900" y="4000"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882441">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684436523371105" name="end" x="5200" y="4000"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882416">
+                                                                                </o>
+                                                                                <xy x="3900" y="4000"/> <xy x="5200" y="4000"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5200 4500 )"
+                                                                                 num="2" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114884381" name="In" resolveid="1684436583071616">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684436583071612" name="begin" x="3900" y="4800"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882458">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684436583071616" name="end" x="5200" y="4800"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114884381">
+                                                                                </o>
+                                                                                <xy x="3900" y="4800"/> <xy x="5200" y="4800"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2FunkAnalog" id="1684493739659967" flags=" fixedStyle"
+                                                                                 transform="translate( 25600 3800 )"
+                                                                                 typ="11" fid="0" nr="1" bgrp="0" bnr="7" bidx="0">
+                                                                                <o classname="TacoPin" id="1685103114884406" name="Fg" resolveid="1684493772741341">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114884408" name="EFgA" resolveid="1684493898198803">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114884419" name="Mux">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114884421" name="EV1" resolveid="1684493781435909">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114887971" name="EV2">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114887973" name="EV3">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114887975" name="EV4">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114887986" name="EV5">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114887988" name="EV6">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114887990" name="EV7">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114887992" name="EV8">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888003" name="EV9">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888005" name="EV10">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888007" name="Erg" resolveid="1684493854116839">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888009" name="W1">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888011" name="W2">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888022" name="W3">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888024" name="W4">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888026" name="W5">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888028" name="W6">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888040" name="W7">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888042" name="W8">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888044" name="W9">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103114888046" name="W10">
+                                                                                </o>
+                                                                                <wert name="FktGr" val="0"/>
+                                                                                <ev name="Fg" qu="8" fid="0" wert="1" eanr="1" avi="0" spin="true"/>
+                                                                                <ev name="EFgA" qu="4" fid="0" wert="1" eanr="2" avi="0" spin="true"/>
+                                                                                <ev name="Mux" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV1" qu="4" fid="0" wert="0" eanr="3" avi="0" spin="true"/>
+                                                                                <ev name="EV2" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV3" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV4" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV5" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV6" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV7" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV8" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV9" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV10" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <wert name="EFgAO" val="0"/>
+                                                                                <wert name="MuxO" val="0"/>
+                                                                                <wert name="Off1" val="0"/>
+                                                                                <wert name="Off2" val="0"/>
+                                                                                <wert name="Off3" val="0"/>
+                                                                                <wert name="Off4" val="0"/>
+                                                                                <wert name="Off5" val="0"/>
+                                                                                <wert name="Off6" val="0"/>
+                                                                                <wert name="Off7" val="0"/>
+                                                                                <wert name="Off8" val="0"/>
+                                                                                <wert name="Off9" val="0"/>
+                                                                                <wert name="Off10" val="0"/>
+                                                                                <wert name="Anz" val="1"/>
+                                                                                <wert name="Mode" val="5"/>
+                                                                                <wert name="Filt" val="0"/>
+                                                                                <wert name="Reset" val="0"/>
+                                                                                <wert name="Erg110" val="0"/>
+                                                                                <av name="Erg" spin="true" bits="0"/>
+                                                                                <av name="W1" bits="0"/>
+                                                                                <av name="W2" bits="0"/>
+                                                                                <av name="W3" bits="0"/>
+                                                                                <av name="W4" bits="0"/>
+                                                                                <av name="W5" bits="0"/>
+                                                                                <av name="W6" bits="0"/>
+                                                                                <av name="W7" bits="0"/>
+                                                                                <av name="W8" bits="0"/>
+                                                                                <av name="W9" bits="0"/>
+                                                                                <av name="W10" bits="0"/>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1684834471959808" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684493772741337" name="begin" x="25150" y="4000"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882426">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684493772741341" name="end" x="25600" y="4700"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114884406">
+                                                                                </o>
+                                                                                <xy x="25150" y="4000"/> <xy x="25600" y="4700"/> 
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1684834471959824" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="SensorPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684493781435905" name="begin" x="25100" y="5300"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114884357">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684493781435909" name="end" x="25600" y="5300"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114884421">
+                                                                                </o>
+                                                                                <xy x="25100" y="5300"/> <xy x="25600" y="5300"/> 
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1684834471959848" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="FunctionPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684493854116839" name="begin" x="30400" y="4700"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114888007">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684493854116843" name="end" x="30800" y="4700"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114883483">
+                                                                                </o>
+                                                                                <xy x="30400" y="4700"/> <xy x="30800" y="4700"/> 
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1684834471959859" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="SensorPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684493898198799" name="begin" x="25100" y="5000"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114884353">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684493898198803" name="end" x="25600" y="5000"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114884408">
+                                                                                </o>
+                                                                                <xy x="25100" y="5000"/> <xy x="25600" y="5000"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5300 14800 )"
+                                                                                 num="4" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114888204" name="In" resolveid="1684493954047388">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684493954047384" name="begin" x="4200" y="15100"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114883434">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684493954047388" name="end" x="5300" y="15100"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114888204">
+                                                                                </o>
+                                                                                <xy x="4200" y="15100"/> <xy x="5300" y="15100"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5300 14000 )"
+                                                                                 num="3" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114888228" name="In" resolveid="1684493962234809">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684493962234805" name="begin" x="4200" y="14300"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114883425">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684493962234809" name="end" x="5300" y="14300"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114888228">
+                                                                                </o>
+                                                                                <xy x="4200" y="14300"/> <xy x="5300" y="14300"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5300 10300 )"
+                                                                                 num="6" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114888248" name="In" resolveid="1684835177843105">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5300 13100 )"
+                                                                                 num="5" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114888257" name="In" resolveid="1684835085233802">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANAusgang" flags=" fixedStyle"
+                                                                                 transform="translate( 5100 6200 )"
+                                                                                 num="7" typ="2">
+                                                                                <o classname="TacoPin" id="1685103114888267" name="In" resolveid="1684835313845078">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684835085232595" name="begin" x="4200" y="13400"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114883421">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684835085233802" name="end" x="5300" y="13400"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114888257">
+                                                                                </o>
+                                                                                <xy x="4200" y="13400"/> <xy x="5300" y="13400"/> 
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinIn" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684835177843105" name="begin" x="5300" y="10600"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114888248">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684835177843109" name="end" x="4200" y="10600"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114883401">
+                                                                                </o>
+                                                                                <xy x="5300" y="10600"/> <xy x="4200" y="10600"/> 
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684835313844087" name="begin" x="3900" y="6500"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882389">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684835313845078" name="end" x="5100" y="6500"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114888267">
+                                                                                </o>
+                                                                                <xy x="3900" y="6500"/> <xy x="5100" y="6500"/> 
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1684835384819854" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684835384820848" name="begin" x="4000" y="3200"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882450">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684835384821844" name="end" x="5200" y="3200"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882412">
+                                                                                </o>
+                                                                                <xy x="4000" y="3200"/> <xy x="5200" y="3200"/> 
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1684835429123834" name="begin" x="4000" y="1100"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882378">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1684835429123838" name="end" x="5200" y="1100"
+                                                                                     pinclass="TaWirePin" resolveid="1685103114882402">
+                                                                                </o>
+                                                                                <xy x="4000" y="1100"/> <xy x="5200" y="1100"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANEingang" id="1685103508039713" flags=" fixedStyle"
+                                                                                 transform="translate( 20500 13300 )"
+                                                                                 num="1" typ="1">
+                                                                                <o classname="TacoPin" id="1685103508039714" name="Out" resolveid="1685103776930666">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2TacoCANEingang" id="1685103736529330" flags=" fixedStyle"
+                                                                                 transform="translate( 20500 13800 )"
+                                                                                 num="2" typ="1">
+                                                                                <o classname="TacoPin" id="1685103736529331" name="Out" resolveid="1685103783469300">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="u16x2FunkLogik" id="1685103771108705" flags=" fixedStyle"
+                                                                                 transform="translate( 25300 11800 )"
+                                                                                 typ="10" fid="2" nr="2" bgrp="0" bnr="2" bidx="1">
+                                                                                <o classname="TacoPin" id="1685103771108706" name="Fg">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108707" name="EFgA">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108708" name="IFgA">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108709" name="EV1" resolveid="1685103776930670">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108710" name="EV2" resolveid="1685103783469304">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108711" name="EV3">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108712" name="EV4">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108713" name="EV5">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108714" name="EV6">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108715" name="EV7">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108716" name="EV8">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108717" name="EV9">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108718" name="EV10">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108719" name="Erg" resolveid="1685103826457721">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103771108720" name="Inv">
+                                                                                </o>
+                                                                                <ev name="Fg" qu="0" fid="0" wert="1" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EFgA" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="IFgA" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV1" qu="8" fid="0" wert="0" eanr="1" avi="0" spin="true"/>
+                                                                                <ev name="EV2" qu="8" fid="0" wert="0" eanr="2" avi="0" spin="true"/>
+                                                                                <ev name="EV3" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV4" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV5" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV6" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV7" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV8" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV9" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV10" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <wert name="Anz" val="2"/>
+                                                                                <wert name="Typ" val="0"/>
+                                                                                <av name="Erg" spin="true" bits="0"/>
+                                                                                <av name="Inv" spin="true" bits="0"/>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1685103776930662" layer="3" flags=" filled(0)" points="4" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1685103776930666" name="begin" x="23700" y="13600"
+                                                                                     pinclass="TaWirePin" resolveid="1685103508039714">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1685103776930670" name="end" x="25300" y="13600"
+                                                                                     pinclass="TaWirePin" resolveid="1685103771108709">
+                                                                                </o>
+                                                                                <xy x="23700" y="13600"/> <xy x="24200" y="13600"/> <xy x="24200" y="13600"/> <xy x="25300" y="13600"/> 
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1685103783469296" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="NetworkPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1685103783469300" name="begin" x="23700" y="14100"
+                                                                                     pinclass="TaWirePin" resolveid="1685103736529331">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1685103783469304" name="end" x="25300" y="13900"
+                                                                                     pinclass="TaWirePin" resolveid="1685103771108710">
+                                                                                </o>
+                                                                                <xy x="23700" y="14100"/> <xy x="25300" y="13900"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2FunkAnalog" id="1685103817114246" flags=" fixedStyle"
+                                                                                 transform="translate( 32100 11800 )"
+                                                                                 typ="11" fid="3" nr="3" bgrp="0" bnr="3" bidx="2">
+                                                                                <o classname="TacoPin" id="1685103817114247" name="Fg" resolveid="1685103826459022">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114248" name="EFgA">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114249" name="Mux">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114250" name="EV1">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114251" name="EV2">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114252" name="EV3">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114253" name="EV4">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114254" name="EV5">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114255" name="EV6">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114256" name="EV7">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114257" name="EV8">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114258" name="EV9">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114259" name="EV10">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114260" name="Erg" resolveid="1685103864663389">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114261" name="W1">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114262" name="W2">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114263" name="W3">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114264" name="W4">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114265" name="W5">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114266" name="W6">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114267" name="W7">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114268" name="W8">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114269" name="W9">
+                                                                                </o>
+                                                                                <o classname="TacoPin" id="1685103817114270" name="W10">
+                                                                                </o>
+                                                                                <wert name="FktGr" val="0"/>
+                                                                                <ev name="Fg" qu="3" fid="2" wert="1" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EFgA" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="Mux" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV1" qu="0" fid="0" wert="1" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV2" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV3" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV4" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV5" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV6" qu="0" fid="0" wert="0" eanr="0" avi="0" spin="true"/>
+                                                                                <ev name="EV7" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV8" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV9" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <ev name="EV10" qu="0" fid="0" wert="0" eanr="0" avi="0"/>
+                                                                                <wert name="EFgAO" val="0"/>
+                                                                                <wert name="MuxO" val="0"/>
+                                                                                <wert name="Off1" val="0"/>
+                                                                                <wert name="Off2" val="0"/>
+                                                                                <wert name="Off3" val="0"/>
+                                                                                <wert name="Off4" val="0"/>
+                                                                                <wert name="Off5" val="0"/>
+                                                                                <wert name="Off6" val="0"/>
+                                                                                <wert name="Off7" val="0"/>
+                                                                                <wert name="Off8" val="0"/>
+                                                                                <wert name="Off9" val="0"/>
+                                                                                <wert name="Off10" val="0"/>
+                                                                                <wert name="Anz" val="1"/>
+                                                                                <wert name="Mode" val="1"/>
+                                                                                <wert name="Filt" val="0"/>
+                                                                                <wert name="Reset" val="0"/>
+                                                                                <wert name="Erg110" val="0"/>
+                                                                                <av name="Erg" spin="true" bits="0"/>
+                                                                                <av name="W1" bits="0"/>
+                                                                                <av name="W2" bits="0"/>
+                                                                                <av name="W3" bits="0"/>
+                                                                                <av name="W4" bits="0"/>
+                                                                                <av name="W5" bits="0"/>
+                                                                                <av name="W6" bits="0"/>
+                                                                                <av name="W7" bits="0"/>
+                                                                                <av name="W8" bits="0"/>
+                                                                                <av name="W9" bits="0"/>
+                                                                                <av name="W10" bits="0"/>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1685103826456727" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="FunctionPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1685103826457721" name="begin" x="30100" y="12700"
+                                                                                     pinclass="TaWirePin" resolveid="1685103771108719">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1685103826459022" name="end" x="32100" y="12700"
+                                                                                     pinclass="TaWirePin" resolveid="1685103817114247">
+                                                                                </o>
+                                                                                <xy x="30100" y="12700"/> <xy x="32100" y="12700"/> 
+                                                                            </o>
+                                                                            <o classname="u16x2TacoModbusAusgang" id="1685103861092653" flags=" fixedStyle"
+                                                                                 transform="translate( 38000 12400 )"
+                                                                                 num="3">
+                                                                                <o classname="TacoPin" id="1685103861092654" name="In" resolveid="1685103864664388">
+                                                                                </o>
+                                                                            </o>
+                                                                            <o classname="a2dWirePolylineL" id="1685103864662398" layer="3" flags=" filled(0)" points="2" invert="true" pcobjbegin="FunctionPinOut" pcwirebegin="TaWirePin" pcwireend="TaWirePin">
+                                                                                <o classname="TaPin" id="1685103864663389" name="begin" x="36900" y="12700"
+                                                                                     pinclass="TaWirePin" resolveid="1685103817114260">
+                                                                                </o>
+                                                                                <o classname="TaPin" id="1685103864664388" name="end" x="38000" y="12700"
+                                                                                     pinclass="TaWirePin" resolveid="1685103861092654">
+                                                                                </o>
+                                                                                <xy x="36900" y="12700"/> <xy x="38000" y="12700"/> 
+                                                                            </o>
+                                                                        </o>
+                                                                    </drawing>
+                                                                    
+                                                                    <properties>
+                                                                        <o classname="a2dStringProperty" name="Name" value="UVR Diagram">
+                                                                        </o>
+                                                                    </properties>
+                                                                    
+                                                                </o>
+                                                            </drawing>
+                                                        </o>
+                                                    </o>
+                                                </drawing>
+                                                
+                                                <properties>
+                                                    <o classname="a2dStringProperty" name="Name" value="outsideUVR">
+                                                    </o>
+                                                </properties>
+                                                
+                                            </o>
+                                        </drawing>
+                                    </o>
+                                </o>
+                            </drawing>
+                            
+                            <properties>
+                                <o classname="a2dStringProperty" name="Name" value="outsideUVR">
+                                </o>
+                            </properties>
+                            
+                        </o>
+                    </appearances>
+                </o>
+            </o>
+        </drawing>
+        
+        <properties>
+            <o classname="a2dStringProperty" name="Name" value="top">
+            </o>
+        </properties>
+        
+    </o>
+</tapps>

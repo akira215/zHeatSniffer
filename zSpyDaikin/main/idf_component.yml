@@ -1,0 +1,10 @@
+files:
+  exclude:
+    - "components/**/*"      # Exclude an entire directory and all its contents
+  include:
+    - "components/cppgpio"
+    - "components/periodicTask"
+dependencies:
+  # Required IDF version
+  idf: ">=4.1"
+  espressif/button: "^3.0.0"

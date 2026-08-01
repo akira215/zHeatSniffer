@@ -4,6 +4,8 @@
 #include "driver/gpio.h"
 #include <vector>
 #include <string>
+#include "freertos/FreeRTOS.h"
+#include "freertos/semphr.h" // Required for Semaphore/Mutex APIs
 
 #define UART1_NUM           UART_NUM_1
 
@@ -34,6 +36,7 @@
 
 class RegisterMap 
 {
+public:
     struct register_t {
         uint16_t address;
         uint16_t value;
@@ -45,43 +48,71 @@ class RegisterMap
         }
     };
 private:
-    std::vector<register_t> m_registers;
+    std::vector<register_t> _registers;
+    mutable SemaphoreHandle_t _mutex; // Mutable allows locking inside 'const' methods
 
 public:
+    // Constructor
+    RegisterMap() {
+        _mutex = xSemaphoreCreateMutex();
+    }
+
+    // Destructor
+    ~RegisterMap() {
+        if (_mutex != nullptr) {
+            vSemaphoreDelete(_mutex);
+        }
+    }
+
+    // Expose manual locking for safe raw reference/pointer manipulation
+    void lock() const { 
+        xSemaphoreTake(_mutex, portMAX_DELAY); 
+    }
+    
+    void unlock() const { 
+        xSemaphoreGive(_mutex); 
+    }
+
     // Pre-allocate memory to completely avoid runtime heap allocation
     void reserve(size_t capacity) {
-        m_registers.reserve(capacity);
+
+         _registers.reserve(capacity);
+
     }
 
-    // Single item assignment/lookup
-    uint16_t& operator[](uint16_t address) {
+    // Read/Write operator (Needs strict locking)
+    register_t& operator[](uint16_t address) {
         register_t target{address, 0, true};
-        auto it = std::lower_bound(m_registers.begin(), m_registers.end(), target);
+        auto it = std::lower_bound(_registers.begin(), _registers.end(), target);
 
-        if (it == m_registers.end() || it->address != address) {
-            it = m_registers.insert(it, register_t{address, 0, true});
+        if (it == _registers.end() || it->address != address) {
+            it = _registers.insert(it, register_t{address, 0, true});
         }
-        return it->value;
+        register_t& ref = (*it);
+
+        return ref;
     }
 
-    uint16_t operator[](uint16_t address) const {
+    // Const read operator
+    // WARNING: Call map.lock() before using this, and map.unlock() after you are done processing the reference.
+    const register_t& operator[](uint16_t address) const {
         register_t target{address, 0, true};
-        auto it = std::lower_bound(m_registers.begin(), m_registers.end(), target);
-        
-        if (it != m_registers.end() && it->address == address) {
-            return it->value;
+        auto it = std::lower_bound(_registers.begin(), _registers.end(), target);
+        if (it != _registers.end() && it->address == address) {
+            return (*it);
         }
-        return 0; 
+        return (*it);
     }
 
     // Handles both inserting new registers and updating existing ones
     void upsert(uint16_t address, uint16_t value) {
+
         register_t target{address, 0, true};
         
         // O(log N) binary search to find the correct position
-        auto it = std::lower_bound(m_registers.begin(), m_registers.end(), target);
+        auto it = std::lower_bound(_registers.begin(), _registers.end(), target);
 
-        if (it != m_registers.end() && it->address == address) {
+        if (it != _registers.end() && it->address == address) {
             // Case 1: Register already exists, update it in place
             if (it->value == value)
                 it->updated = false;
@@ -90,8 +121,9 @@ public:
             it->value = value;
         } else {
             // Case 2: Register does not exist, insert it while keeping the vector sorted
-            m_registers.insert(it, register_t{address, value, true});
+            _registers.insert(it, register_t{address, value, true});
         }
+
     }
 
     /**
@@ -104,18 +136,18 @@ public:
         if (count == 0 || values == nullptr) return;
 
         // Ensure vector has enough total capacity to prevent hidden reallocations
-        if (m_registers.size() + count > m_registers.capacity()) {
-            m_registers.reserve(m_registers.size() + count + 10);
+        if (_registers.size() + count > _registers.capacity()) {
+            _registers.reserve(_registers.size() + count + 10);
         }
 
         // 1. Find where the block should start in our sorted vector
         register_t target{start_address, 0, true};
-        auto it = std::lower_bound(m_registers.begin(), m_registers.end(), target);
+        auto it = std::lower_bound(_registers.begin(), _registers.end(), target);
 
         size_t value_idx = 0;
 
         // 2. Overwrite existing registers that match the incoming block
-        while (it != m_registers.end() && value_idx < count && it->address == (start_address + value_idx)) {
+        while (it != _registers.end() && value_idx < count && it->address == (start_address + value_idx)) {
             if (it->value == values[value_idx])
                 it->updated = false;
             else   
@@ -138,30 +170,46 @@ public:
         }
 
         // 4. Perform a single batch insertion, which moves memory down exactly ONCE
-        m_registers.insert(it, new_entries.begin(), new_entries.end());
+        _registers.insert(it, new_entries.begin(), new_entries.end());
+
     }
 
-    // O(log N) lookup. Returns true if found, sets the value reference
-    register_t* get(uint16_t address) {
+    // WARNING: Caller must manually use map.lock() / map.unlock() around this call
+    register_t* getItem(uint16_t address) {
         register_t target{address, 0, true};
-        auto it = std::lower_bound(m_registers.begin(), m_registers.end(), target);
-        
-        if (it != m_registers.end() && it->address == address) {
+        auto it = std::lower_bound(_registers.begin(), _registers.end(), target);
+        if (it != _registers.end() && it->address == address) {
             return &(*it);
         }
         return nullptr;
     }
 
+    // O(log N) lookup. Returns true if found, sets the value reference
+    uint16_t getValue(uint16_t address) const {
+        uint16_t result = 0;
+        register_t target{address, 0, true};
+
+        auto it = std::lower_bound(_registers.begin(), _registers.end(), target);
+
+        if (it != _registers.end() && it->address == address) {
+            result = it->value;
+        }
+
+        return result;
+    }
+
+    // WARNING: Caller must manually use map.lock() / map.unlock() around this call
     const register_t& at(uint16_t n) const {
-        return m_registers.at(n);
+        return _registers.at(n);
     }
 
     void setUpdated(uint16_t n, bool updated) {
-        m_registers.at(n).updated = updated;
+        _registers.at(n).updated = updated;
+
     }
 
     size_t size() const {
-        return m_registers.size();
+        return _registers.size();
     }
 };
 
@@ -184,12 +232,15 @@ class DriverAhd final
     uint8_t     _nBytes     = 0;
     uint16_t _startingAdd   = 0;
     uint16_t _nRegisters    = 0;
+    uint16_t _writeAdd      = 0;
+    uint16_t _nWrite        = 0;
 
 public:
     DriverAhd();
     ~DriverAhd();
 
     static void uartRxTask(void *pvParameters);
+    static void displayTask(void *pvParameters);
 
     void start();
 

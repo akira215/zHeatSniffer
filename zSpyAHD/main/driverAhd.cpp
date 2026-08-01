@@ -38,8 +38,8 @@ DriverAhd::~DriverAhd()
 void DriverAhd::start()
 {
     xTaskCreate(DriverAhd::uartRxTask, "DriverAhd_Task", 4096, this, 5, NULL);
-    ESP_LOGI(TAG, "UART1 initialized at %d baud", UART1_BAUD_RATE);
-
+    //ESP_LOGI(TAG, "UART1 initialized at %d baud", UART1_BAUD_RATE);
+    //xTaskCreate(DriverAhd::displayTask, "Display_Task", 4096, this, 2, NULL);
     // Clear screen and home cursor once at startup
     printf("\e[2J\e[H");
 }
@@ -96,7 +96,7 @@ void DriverAhd::uartRxTask(void *pvParameters)
             }
         }
         // Yield to other tasks
-        vTaskDelay(pdMS_TO_TICKS(10));
+        vTaskDelay(pdMS_TO_TICKS(100));
     }
     free(rxBuffer);
     vTaskDelete(NULL);
@@ -115,7 +115,7 @@ void DriverAhd::processFrame()
     //printRawFrame();
     buildFrame();
     if(!checkSum()){
-        ESP_LOGE(TAG, "Invalid Checksum for frame length %d bytes", _data.size());
+        _lastErr = std::string("Checksum error in a frame           ");
         return;
     }
 
@@ -189,6 +189,10 @@ void DriverAhd::decodeFrame()
         } else { // Slave Response
             if (_startingAdd == REG_SLAVE_POINTER) { // Master query slave what to do next
                 // Here slave answer 3 words : function - start - num of reg
+                if (_bytes[4] == MODBUS_FUNC_WRITE) {  // Capture when slave ask a write
+                    _writeAdd = (static_cast<uint16_t>(_bytes[5]) << 8) | _bytes[6];
+                    _nWrite = (static_cast<uint16_t>(_bytes[7]) << 8) | _bytes[8];
+                }
             } else { // Slave response data
                 _nBytes = _bytes[2];
                 if (_nBytes != (_bytes.size() - 4))
@@ -196,11 +200,23 @@ void DriverAhd::decodeFrame()
                 else {
                     for (uint8_t i = 0; i < _nBytes / 2; ++i) {
                         uint16_t value = (static_cast<uint16_t>(_bytes[3+i*2]) << 8) | _bytes[4+i*2];
-                        bool updated = true;
-                        if (_registerMap[_startingAdd + i] == value)
-                            updated = false;
-                        _registerMap[_startingAdd + i] = value;
-                        _registerMap.get(_startingAdd + i)->updated = updated;
+
+                        _registerMap.lock();
+                        RegisterMap::register_t* reg = _registerMap.getItem(_startingAdd + i);
+                        if (reg == nullptr) {
+                            _registerMap[_startingAdd + i].value = value;
+                            _registerMap[_startingAdd + i].updated = true;
+
+                        } else {
+                            if (reg->value == value)
+                                reg->updated = false;
+                            else {
+                                reg->updated = true;
+                                reg->value = value;
+                            }
+                        }
+                        _registerMap.unlock();
+
                     }
                 }
             }
@@ -220,11 +236,22 @@ void DriverAhd::decodeFrame()
             else {
                  for (uint8_t i = 0; i < _nBytes / 2; ++i) {
                     uint16_t value = (static_cast<uint16_t>(_bytes[7+i*2]) << 8) | _bytes[8+i*2];
-                    bool updated = true;
-                    if (_registerMap[start + i] == value)
-                        updated = false;
-                    _registerMap[start + i] =  value;
-                    _registerMap.get(start + i)->updated = updated;
+                    
+                    _registerMap.lock();
+                    RegisterMap::register_t* reg = _registerMap.getItem(start + i);
+                    if (reg == nullptr) {
+                        _registerMap[start + i].value = value;
+                        _registerMap[start + i].updated = true;
+
+                    } else {
+                        if (reg->value == value)
+                            reg->updated = false;
+                        else {
+                            reg->updated = true;
+                            reg->value = value;
+                        }
+                    }
+                    _registerMap.unlock();
                 }
             }
 
@@ -233,34 +260,58 @@ void DriverAhd::decodeFrame()
 
 }
 
+//Static
+void DriverAhd::displayTask(void *pvParameters)
+{
+    DriverAhd* instance = static_cast<DriverAhd*>(pvParameters);
+    
+    // Clear screen and home cursor once at startup
+    printf("\e[2J\e[H");
+
+    while (1) {
+        
+        instance->printDashboard();
+
+        // Yield to other tasks
+        vTaskDelay(pdMS_TO_TICKS(100));
+    }
+    vTaskDelete(NULL);
+}
+
 void DriverAhd::printDashboard()
 {
     // Move cursor to top-left corner without clearing
     printf("\e[H");
 
     // Draw the static interface layout
-    printf("-------------------------------------------------------------\n");
-    printf("|                   AHD20 Controller Table                  |\n");
-    printf("-------------------------------------------------------------\n");
+    printf("-------------------------------------------------------------------------\n");
+    printf("|                          AHD20 Controller Table                       |\n");
+    printf("-------------------------------------------------------------------------\n");
     
     // Print dynamic data in fixed rows
-    printf("|  Slave ID  0x%02X  | num of frames " RED "%*ld" RESET "  |  function 0x%02X  |\n", _slaveId, 5, _nFrame, _function);
-    printf("-------------------------------------------------------------\n");
-    printf("| Last Error: "RED"%*s"RESET"|\n", 46, _lastErr.c_str());
+    printf("|    Slave ID  0x%02X     |    Num of frames " RED "%*ld" RESET "   |    Function 0x%02X   |\n", 
+                            _slaveId, 5, _nFrame, _function);
+    printf("| Address requested by slave  0x%04X   |   Number of registers 0x%04X   |\n",
+        _writeAdd, _nWrite);
+    printf("-------------------------------------------------------------------------\n");
+    printf("| Last Error: "RED"%*s"RESET"|\n", 58, _lastErr.c_str());
+    
+    _registerMap.lock();
     for (uint8_t i = 0; i <  _registerMap.size(); ++i) {
         if ((i >0 )&&(i % DISPLAY_N_PER_LINE == 0)) // Go to new line if i is multiple of num per line
             printf("|\n");
         auto data = _registerMap.at(i);
-        printf("| 0x%02X : ", data.address);
+        printf("| 0x%04X : ", data.address);
         
         if(data.updated)
             printf(RED);
         
-        printf("%*d ", 5, data.value);
+        printf("%*d ", 6, data.value);
 
         if(data.updated)
             printf(RESET);
         
     }
+    _registerMap.unlock();
 
 }

@@ -1,0 +1,35 @@
+menu "ALDES VMC"
+
+    config VMC_POLLING_MS
+        int "Polling delay for VMC in ms"
+        range 1000 3600000
+        default 2500
+        help
+            Delay between 2 queries to VMC device
+
+    config VMC_POLLING_GEN_DATA
+          int "Polling delay for general VMC data in seconds"
+        range 30 3600000
+        default 300
+        help
+            Delay between 2 queries to VMC device for regulation params, filters, season, speed settings
+
+endmenu
+
+menu "Pin layout"
+    config PIN_LED
+        int "On Board LED GPIO Num"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_OUT_RANGE_MAX
+        default 23
+        help
+            GPIO number for Led that App will use as UI.    
+    
+    config PIN_BUTTON
+        int "On Board Button GPIO Num"
+        range ENV_GPIO_RANGE_MIN ENV_GPIO_OUT_RANGE_MAX
+        default 9
+        help
+            GPIO number for the button that App will use as UI.
+    
+endmenu
+
