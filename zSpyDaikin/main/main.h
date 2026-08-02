@@ -1,6 +1,7 @@
 #pragma once
 
 #include "driverHomebus.h"
+#include "driverDaikin.h"
 #include "driver/uart.h"
 #include "driver/gpio.h"
 
@@ -14,7 +15,8 @@ public:
     void setup(void);
 
 private:
-    DriverHomebus* _hbs = nullptr;
+    DriverHomebus* _hbs     = nullptr;
+    DriverDaikin* _daikin   = nullptr;
 
     uint8_t buffer[100];
 

@@ -5,6 +5,9 @@
 #include "DriverHomebus.h"
 
 static const char *TAG = "DriverHomebus";
+std::function<void(const std::vector<uint8_t>&)> DriverHomebus::_callback = nullptr;
+
+
 
 // Static ISR handler
 bool IRAM_ATTR DriverHomebus::rxRmtIsr(rmt_channel_handle_t channel,
@@ -12,6 +15,7 @@ bool IRAM_ATTR DriverHomebus::rxRmtIsr(rmt_channel_handle_t channel,
                                                 void *user_data)
 {
     DriverHomebus* instance = (DriverHomebus*)user_data;
+    //ESP_LOGV(TAG, "Interrupt");
 
     if (edata->num_symbols > 0) {
         if (edata->num_symbols <= instance->_rxBufferSize) {
@@ -144,7 +148,8 @@ DriverHomebus::DriverHomebus()
 
 DriverHomebus::~DriverHomebus()
 {
-     if (_txEncoder) {
+    stop();
+    if (_txEncoder) {
         rmt_del_encoder(_txEncoder);
         _txEncoder = nullptr;
     }
@@ -249,47 +254,68 @@ void DriverHomebus::start()
     }
    
     // Clear screen and home cursor once at startup
-    printf("\e[2J\e[H");
+    //printf("\e[2J\e[H");
+
+    xTaskCreate(DriverHomebus::rxTask, "HbsRxTask", 4096, this, 5, &rxTaskHandle);
+    ESP_LOGI(TAG, "Rx started");
 }
 
-
-void DriverHomebus::run()
+void DriverHomebus::stop()
 {
-    if (_overflow){
-        ESP_LOGW(TAG, "RX buffer overflow");
-        _overflow = false;
-        return;
+   
+    // Delete the task using its handle
+    if (rxTaskHandle != nullptr) {
+        vTaskDelete(rxTaskHandle);
+        rxTaskHandle = nullptr; // Prevent using an invalid handle
     }
 
-    // Check if a buffer is ready for processing
-    uint8_t currentIdx = _readIdx;
-    if (currentIdx == 0xFF) {
-        return;
-    }
+     // Set RST pin to low
+    _enable.off();
 
-    // Capture state and mark as processed
-    // Note: Reception already restarted in ISR callback on the other buffer
-    size_t size = _nSymbols;
-     _readIdx = 0xFF;
-    _nSymbols = 0;
-
-    // Process received data from the completed buffer
-    std::vector<uint8_t> data = decodeRmtData(_rxBuffers[currentIdx], size);
-
-    // Filter for potential noise/invalid packets. We need at least the header present
-    if (data.size() < 3)
-        return;
-
-    printPacket(data);
-
-    // Pass buffer up stack
-    /*
-    if (this->callback_)
-    {
-        this->callback_(this->callback_arg_, buffer, decoded_size);
-    }
-        */
+    ESP_LOGI(TAG, "Rx stopped");
 }
+
+//Static
+void DriverHomebus::rxTask(void *pvParameters)
+{
+    DriverHomebus* instance = static_cast<DriverHomebus*>(pvParameters);
+
+    while (1) {
+        if (instance->_overflow){
+            ESP_LOGW(TAG, "RX buffer overflow");
+            instance->_overflow = false;
+        } else {
+
+            // Check if a buffer is ready for processing
+            uint8_t currentIdx = instance->_readIdx;
+            if (currentIdx != 0xFF) {
+                
+                // Capture state and mark as processed
+                // Note: Reception already restarted in ISR callback on the other buffer
+                size_t size = instance->_nSymbols;
+                instance->_readIdx = 0xFF;
+                instance->_nSymbols = 0;
+
+                // Process received data from the completed buffer
+                std::vector<uint8_t> data = decodeRmtData(instance->_rxBuffers[currentIdx], size);
+
+                // Filter for potential noise/invalid packets. We need at least the header present
+                if (data.size() >= 3) {
+                    printPacket(data);
+                    
+                    // Pass buffer up stack
+                    if (instance->_callback) {
+                        instance->_callback(data);
+                    }
+        
+                }
+            }
+        }
+        vTaskDelay(pdMS_TO_TICKS(10));
+    }
+    vTaskDelete(NULL);
+}
+
 
 //static
 std::vector<uint8_t> DriverHomebus::decodeRmtData(rmt_symbol_word_t *symbols, size_t num_symbols)
@@ -383,8 +409,6 @@ std::vector<uint8_t> DriverHomebus::decodeRmtData(rmt_symbol_word_t *symbols, si
         }
     } // while (symbol_index < symbol_num)
 
-
-
     return result;
 }
 
@@ -408,45 +432,4 @@ void DriverHomebus::printPacket(const std::vector<uint8_t>& data)
     }
     *p = 0;
     ESP_LOGV(TAG, "%s", str);
-}
-
-//
-void DriverHomebus::printDashboard()
-{
-    // Move cursor to top-left corner without clearing
-    printf("\e[H");
-    /*
-
-    // Draw the static interface layout
-    printf("-------------------------------------------------------------------------\n");
-    printf("|                          AHD20 Controller Table                       |\n");
-    printf("-------------------------------------------------------------------------\n");
-    
-    // Print dynamic data in fixed rows
-    printf("|    Slave ID  0x%02X     |    Num of frames " RED "%*ld" RESET "   |    Function 0x%02X   |\n", 
-                            _slaveId, 5, _nFrame, _function);
-    printf("| Address requested by slave  0x%04X   |   Number of registers 0x%04X   |\n",
-        _writeAdd, _nWrite);
-    printf("-------------------------------------------------------------------------\n");
-    printf("| Last Error: "RED"%*s"RESET"|\n", 58, _lastErr.c_str());
-    
-    _registerMap.lock();
-    for (uint8_t i = 0; i <  _registerMap.size(); ++i) {
-        if ((i >0 )&&(i % DISPLAY_N_PER_LINE == 0)) // Go to new line if i is multiple of num per line
-            printf("|\n");
-        auto data = _registerMap.at(i);
-        printf("| 0x%04X : ", data.address);
-        
-        if(data.updated)
-            printf(RED);
-        
-        printf("%*d ", 6, data.value);
-
-        if(data.updated)
-            printf(RESET);
-        
-    }
-    _registerMap.unlock();
-    */
-
 }
