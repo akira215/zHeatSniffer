@@ -1,7 +1,7 @@
 //#define LOG_LOCAL_LEVEL ESP_LOG_VERBOSE
 
 #include "main.h"
-#include "driver/uart.h"
+
 #include <freertos/FreeRTOS.h>
 #include <freertos/task.h>
 #include <esp_log.h>
