@@ -59,8 +59,6 @@ DriverHomebus::DriverHomebus()
     tx_config.mem_block_symbols = 64;
     tx_config.trans_queue_depth = 1;
     tx_config.flags.invert_out = 0;
-    tx_config.flags.io_od_mode = false;
-    tx_config.flags.io_loop_back = false;
 
     esp_err_t err = rmt_new_tx_channel(&tx_config, &_tx);
     if (err != ESP_OK)

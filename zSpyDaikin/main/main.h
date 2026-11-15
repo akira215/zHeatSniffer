@@ -15,8 +15,8 @@ public:
     void setup(void);
 
 private:
-    DriverHomebus* _hbs     = nullptr;
-    DriverDaikin* _daikin   = nullptr;
+    DriverHomebus*  _hbs    = nullptr;
+    DriverDaikin*   _daikin = nullptr;
 
     uint8_t buffer[100];
 

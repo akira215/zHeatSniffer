@@ -7,4 +7,4 @@ files:
 dependencies:
   # Required IDF version
   idf: ">=4.1"
-  espressif/button: "^3.0.0"
+  espressif/button: "^4.1.4"
